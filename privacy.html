@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MyNext 隐私政策，说明应用如何收集、使用、存储和保护用户数据。">
+  <title>MyNext 隐私政策</title>
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --surface: rgba(255, 255, 255, 0.92);
+      --surface-strong: #ffffff;
+      --text: #1f2c22;
+      --muted: #5d6d62;
+      --line: rgba(31, 44, 34, 0.12);
+      --accent: #3d6b47;
+      --accent-soft: #dfe9e1;
+      --shadow: 0 18px 48px rgba(31, 44, 34, 0.08);
+      --radius: 24px;
+      --content-width: 860px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(61, 107, 71, 0.14), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(112, 150, 123, 0.12), transparent 30%),
+        linear-gradient(180deg, #f7f4ee 0%, var(--bg) 100%);
+      line-height: 1.72;
+    }
+
+    .wrap {
+      width: min(calc(100% - 32px), var(--content-width));
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 56px 0 24px;
+    }
+
+    .hero-card {
+      background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(247,250,247,0.94));
+      border: 1px solid rgba(61, 107, 71, 0.12);
+      border-radius: 32px;
+      box-shadow: var(--shadow);
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -40px -60px auto;
+      width: 180px;
+      height: 180px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(61, 107, 71, 0.12), transparent 70%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      margin: 16px 0 10px;
+      font-size: clamp(32px, 6vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      max-width: 680px;
+      font-size: 16px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta span {
+      padding: 8px 12px;
+      background: rgba(255,255,255,0.75);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 18px;
+      padding-bottom: 48px;
+    }
+
+    .toc,
+    .content {
+      background: var(--surface);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.45);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+    }
+
+    .toc {
+      padding: 22px;
+    }
+
+    .toc h2 {
+      margin: 0 0 12px;
+      font-size: 16px;
+    }
+
+    .toc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+    }
+
+    .toc a {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid var(--line);
+      transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease;
+    }
+
+    .toc a:hover {
+      transform: translateY(-1px);
+      border-color: rgba(61, 107, 71, 0.32);
+      background: #fff;
+    }
+
+    .content {
+      padding: 30px 24px 34px;
+    }
+
+    section {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+      padding-bottom: 4px;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 18px 0 10px;
+      font-size: 18px;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0 0 10px;
+    }
+
+    ul,
+    ol {
+      margin: 0 0 10px 1.25rem;
+      padding: 0;
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    .callout {
+      margin-top: 14px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(223, 233, 225, 0.75), rgba(255, 255, 255, 0.8));
+      border: 1px solid rgba(61, 107, 71, 0.14);
+    }
+
+    .checklist {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .checklist li,
+    .crosslist li {
+      padding-left: 0;
+    }
+
+    .footer {
+      margin-top: 26px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    @media (min-width: 980px) {
+      .layout {
+        grid-template-columns: 260px minmax(0, 1fr);
+        align-items: start;
+      }
+
+      .toc {
+        position: sticky;
+        top: 20px;
+      }
+
+      .content {
+        padding: 34px 36px 40px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 28px;
+      }
+
+      .hero-card,
+      .toc,
+      .content {
+        border-radius: 22px;
+      }
+
+      .hero-card {
+        padding: 24px 20px;
+      }
+
+      .content {
+        padding: 24px 18px 28px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">MyNext · 隐私政策</div>
+        <h1>你的愿望清单，按你的规则保存</h1>
+        <p>本页面说明 MyNext 如何收集、使用、存储与保护你在使用应用过程中提供的数据，以及你可以如何管理自己的账户与信息。</p>
+        <div class="meta">
+          <span>更新日期：2026年7月17日</span>
+          <span>适用产品：MyNext iOS App</span>
+          <span>联系邮箱：rachelzhengys@gmail.com</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <nav class="toc" aria-label="目录">
+        <h2>目录</h2>
+        <div class="toc-grid">
+          <a href="#intro">1. 简介</a>
+          <a href="#collection">2. 我们收集的信息</a>
+          <a href="#usage">3. 信息的使用目的</a>
+          <a href="#storage">4. 数据存储和安全</a>
+          <a href="#third-party">5. 第三方服务</a>
+          <a href="#sharing">6. 数据共享</a>
+          <a href="#deletion">7. 账户删除与数据删除</a>
+          <a href="#children">8. 儿童隐私保护</a>
+          <a href="#rights">9. 用户权利</a>
+          <a href="#cookies">10. Cookie 和追踪技术</a>
+          <a href="#updates">11. 隐私政策的更新</a>
+          <a href="#contact">12. 联系我们</a>
+          <a href="#features">13. 特定功能的隐私说明</a>
+          <a href="#compliance">14. 合规声明</a>
+        </div>
+      </nav>
+
+      <article class="content">
+        <section id="intro">
+          <h2>1. 简介</h2>
+          <p>MyNext（“应用”或“我们”）致力于保护你的隐私。本隐私政策说明我们如何收集、使用、保护和共享你在使用 MyNext 应用时提供的信息。</p>
+        </section>
+
+        <section id="collection">
+          <h2>2. 我们收集的信息</h2>
+
+          <h3>2.1 用户主动提供的信息</h3>
+          <ul>
+            <li><strong>账户信息</strong>：通过 Apple 登录时创建的 Apple ID 相关信息。</li>
+            <li><strong>愿望清单数据</strong>：你创建的愿望项目、行动计划、目标年龄等内容。</li>
+            <li><strong>进度和完成记录</strong>：标记任务完成状态、完成时间、备注等。</li>
+            <li><strong>提醒设置</strong>：你设置的提醒频率、时间和方式。</li>
+          </ul>
+
+          <h3>2.2 自动收集的信息</h3>
+          <ul>
+            <li><strong>设备信息</strong>：设备型号、操作系统版本、应用版本。</li>
+            <li><strong>使用统计</strong>：应用功能使用频率，仅用于改进产品体验。</li>
+            <li><strong>错误日志</strong>：应用崩溃或错误信息，用于帮助我们修复问题。</li>
+            <li><strong>iCloud 数据</strong>：通过 CloudKit 同步的用户数据。</li>
+          </ul>
+
+          <h3>2.3 我们不收集的信息</h3>
+          <ul class="crosslist">
+            <li>不收集你的位置数据。</li>
+            <li>不收集你的联系人列表。</li>
+            <li>不收集你的照片库。</li>
+            <li>不收集你的个人身份识别信息，除非通过 Apple 登录产生的必要账户信息。</li>
+            <li>不收集用于广告追踪的 IDFA。</li>
+          </ul>
+        </section>
+
+        <section id="usage">
+          <h2>3. 信息的使用目的</h2>
+          <p>我们使用收集的信息用于以下目的：</p>
+
+          <h3>3.1 应用核心功能</h3>
+          <ul>
+            <li>创建和管理你的愿望清单。</li>
+            <li>同步数据到你的 iCloud 账户。</li>
+            <li>发送提醒通知。</li>
+            <li>保存你的进度和完成记录。</li>
+          </ul>
+
+          <h3>3.2 产品改进</h3>
+          <ul>
+            <li>分析用户行为模式，了解哪些功能最受欢迎。</li>
+            <li>统计功能使用频率，优化用户界面。</li>
+            <li>收集错误信息，及时修复应用问题。</li>
+          </ul>
+
+          <h3>3.3 AI 功能支持</h3>
+          <ul>
+            <li><strong>灵感推荐</strong>：根据你的愿望类别推荐灵感图片，可能使用第三方图片服务，例如 Unsplash 或 Pexels。</li>
+            <li><strong>AI 助手</strong>：如用户启用 AI 生成功能，使用 Azure OpenAI API 生成行动建议。相关处理遵循微软隐私政策，详见 <a href="https://privacy.microsoft.com/" target="_blank" rel="noreferrer">Azure 隐私声明</a>。</li>
+            <li><strong>自动续期</strong>：重复任务完成后自动创建下一期任务。</li>
+          </ul>
+
+          <h3>3.4 法律和安全</h3>
+          <ul>
+            <li>遵守法律要求和政府要求。</li>
+            <li>保护我们的合法权利和用户安全。</li>
+          </ul>
+        </section>
+
+        <section id="storage">
+          <h2>4. 数据存储和安全</h2>
+
+          <h3>4.1 数据存储位置</h3>
+          <ul>
+            <li><strong>本地存储</strong>：应用数据首先保存在你的设备上，使用 SwiftData。</li>
+            <li><strong>iCloud 存储</strong>：通过 CloudKit 加密同步到你的 iCloud 私有数据库。</li>
+            <li><strong>Apple 服务器</strong>：iCloud 数据由 Apple 托管，位置取决于你的账户地区。</li>
+          </ul>
+
+          <h3>4.2 数据加密</h3>
+          <ul>
+            <li>所有传输中的数据使用 HTTPS 加密。</li>
+            <li>iCloud 数据使用 Apple CloudKit 的端到端加密。</li>
+            <li>本地数据使用 iOS 文件系统加密。</li>
+          </ul>
+
+          <h3>4.3 数据安全措施</h3>
+          <ul class="checklist">
+            <li>不将明文密钥保存在应用中。</li>
+            <li>所有 API 调用使用安全的 HTTPS 连接。</li>
+            <li>应用不存储你的 Apple ID 密码。</li>
+            <li>定期更新依赖库以修复安全漏洞。</li>
+          </ul>
+        </section>
+
+        <section id="third-party">
+          <h2>5. 第三方服务</h2>
+
+          <h3>5.1 CloudKit（Apple）</h3>
+          <ul>
+            <li>用于跨设备数据同步。</li>
+            <li>隐私政策：<a href="https://www.apple.com/privacy/" target="_blank" rel="noreferrer">https://www.apple.com/privacy/</a></li>
+            <li>数据完全由你的 iCloud 账户控制。</li>
+          </ul>
+
+          <h3>5.2 Azure OpenAI API（Microsoft）</h3>
+          <ul>
+            <li>仅当你主动启用 AI 生成功能时使用。</li>
+            <li>用于生成愿望建议和行动计划。</li>
+            <li>隐私政策：<a href="https://privacy.microsoft.com/" target="_blank" rel="noreferrer">https://privacy.microsoft.com/</a></li>
+            <li>你可以随时禁用此功能。</li>
+          </ul>
+
+          <h3>5.3 灵感图片 API</h3>
+          <ul>
+            <li>可配置为 Unsplash / Pexels 等图片服务。</li>
+            <li>仅根据愿望类别查询公开图片，不传送个人数据。</li>
+          </ul>
+
+          <h3>5.4 通知服务（Apple）</h3>
+          <ul>
+            <li>使用 Apple Push Notification Service（APNs）。</li>
+            <li>仅用于发送你选择的提醒通知。</li>
+            <li>Apple 隐私政策：<a href="https://www.apple.com/privacy/" target="_blank" rel="noreferrer">https://www.apple.com/privacy/</a></li>
+          </ul>
+        </section>
+
+        <section id="sharing">
+          <h2>6. 数据共享</h2>
+
+          <h3>6.1 我们不会共享给以下主体</h3>
+          <ul class="crosslist">
+            <li>广告公司。</li>
+            <li>数据经纪商。</li>
+            <li>第三方营销公司。</li>
+          </ul>
+
+          <h3>6.2 我们可能共享给</h3>
+          <ul>
+            <li>信任的第三方服务提供商，例如上文列举的 Apple、Microsoft 或图片服务。</li>
+            <li>法律要求或执法部门依法要求的情形。</li>
+            <li>为保护用户和公众安全而有必要的情形。</li>
+          </ul>
+        </section>
+
+        <section id="deletion">
+          <h2>7. 账户删除与数据删除</h2>
+
+          <h3>7.1 删除你的账户和数据</h3>
+          <p>你可以随时在应用中删除你的账户。</p>
+          <div class="callout">
+            <p><strong>操作路径</strong>：设置 → 账户管理 → 删除账户与数据</p>
+          </div>
+          <ul>
+            <li>应用本地数据立即删除。</li>
+            <li>iCloud 中的数据在 30 天内清除。</li>
+            <li>已删除的数据无法恢复。</li>
+          </ul>
+
+          <h3>7.2 撤销 Apple 登录授权</h3>
+          <p>删除应用账户后，如需撤销对 MyNext 的 Apple 登录授权，可按以下步骤操作：</p>
+          <ol>
+            <li>访问 <a href="https://appleid.apple.com" target="_blank" rel="noreferrer">https://appleid.apple.com</a>。</li>
+            <li>登录你的 Apple 账户。</li>
+            <li>在“应用和网站”部分找到 MyNext。</li>
+            <li>点击“停用”或“移除”。</li>
+          </ol>
+        </section>
+
+        <section id="children">
+          <h2>8. 儿童隐私保护</h2>
+          <p>MyNext 面向 13 岁及以上的用户。我们不会有意收集 13 岁以下儿童的个人信息。如果我们发现收集了儿童信息，我们将立即删除该数据。</p>
+        </section>
+
+        <section id="rights">
+          <h2>9. 用户权利</h2>
+
+          <h3>9.1 欧洲用户（GDPR）</h3>
+          <ul>
+            <li>访问你的个人数据。</li>
+            <li>要求更正或删除数据。</li>
+            <li>限制数据处理。</li>
+            <li>数据可携带性。</li>
+            <li>撤销同意。</li>
+          </ul>
+
+          <h3>9.2 加州用户（CCPA）</h3>
+          <ul>
+            <li>了解我们收集的个人信息。</li>
+            <li>删除你的个人信息。</li>
+            <li>选择不出售你的个人信息。</li>
+          </ul>
+        </section>
+
+        <section id="cookies">
+          <h2>10. Cookie 和追踪技术</h2>
+          <p>MyNext 应用不使用 Cookie 或类似追踪技术。</p>
+          <p>如未来存在相关网站页面，网站端可能会使用 Cookie 改进用户体验，具体以当时网站隐私政策为准。</p>
+        </section>
+
+        <section id="updates">
+          <h2>11. 隐私政策的更新</h2>
+          <p>我们可能不时更新本隐私政策。重大更改时，我们将：</p>
+          <ul>
+            <li>在应用内发布通知。</li>
+            <li>在本页面标记更新日期。</li>
+            <li>在适用情况下获取你的新同意。</li>
+          </ul>
+        </section>
+
+        <section id="contact">
+          <h2>12. 联系我们</h2>
+          <p>如果你对本隐私政策有任何疑问或希望行使你的隐私权，请联系：</p>
+          <ul>
+            <li><strong>电子邮件</strong>：<a href="mailto:rachelzhengys@gmail.com">rachelzhengys@gmail.com</a></li>
+            <li><strong>应用内反馈</strong>：设置 → 帮助与反馈</li>
+          </ul>
+          <p>我们将在 30 天内回复你的查询。</p>
+        </section>
+
+        <section id="features">
+          <h2>13. 特定功能的隐私说明</h2>
+
+          <h3>13.1 通知系统</h3>
+          <ul>
+            <li>提醒通知保存在你的设备上和 iCloud 中。</li>
+            <li>通知内容，例如任务标题、时间，属于你的私密信息。</li>
+            <li>Apple 无法看到你的个人通知内容。</li>
+          </ul>
+
+          <h3>13.2 分享卡片功能</h3>
+          <ul>
+            <li>生成的分享卡片是静态图片，不包含额外个人身份信息。</li>
+            <li>卡片仅包含愿望标题、类别与完成状态等你主动展示的内容。</li>
+            <li>分享时调用系统分享表单，由你自行决定分享对象。</li>
+          </ul>
+
+          <h3>13.3 离线功能</h3>
+          <ul>
+            <li>MyNext 大部分功能在离线状态下也能使用。</li>
+            <li>离线编辑的数据会在重新联网后自动同步。</li>
+            <li>未同步的数据会暂时保存在你的设备上。</li>
+          </ul>
+        </section>
+
+        <section id="compliance">
+          <h2>14. 合规声明</h2>
+          <ul class="checklist">
+            <li><strong>ITSAppUsesNonExemptEncryption</strong>：否，仅使用标准 HTTPS。</li>
+            <li><strong>PrivacyInfo.xcprivacy</strong>：已声明 UserDefaults、用户输入数据与非追踪用途。</li>
+            <li><strong>App Store 营养标签</strong>：应准确反映本隐私政策所描述的数据处理方式。</li>
+          </ul>
+
+          <div class="callout">
+            <p><strong>生效日期</strong>：本隐私政策自 2026 年 7 月 17 日起生效。</p>
+            <p><strong>最后更新</strong>：2026 年 7 月 17 日。</p>
+          </div>
+        </section>
+
+        <div class="footer">
+          <p>© MyNext. 本页面用于 App Store 审核与用户公开查阅。</p>
+        </div>
+      </article>
+    </main>
+  </div>
+</body>
+</html>
