@@ -280,7 +280,7 @@
         <h1>你的愿望清单，按你的规则保存</h1>
         <p>本页面说明 MyNext 如何收集、使用、存储与保护你在使用应用过程中提供的数据，以及你可以如何管理自己的账户与信息。</p>
         <div class="meta">
-          <span>更新日期：2026年7月17日</span>
+          <span>更新日期：2026年9月2日</span>
           <span>适用产品：MyNext iOS App</span>
           <span>联系邮箱：rachelzhengys@gmail.com</span>
         </div>
@@ -319,17 +319,16 @@
 
           <h3>2.1 用户主动提供的信息</h3>
           <ul>
-            <li><strong>账户信息</strong>：通过 Apple 登录时创建的 Apple ID 相关信息。</li>
+            <li><strong>账户标识符</strong>：通过 Apple 登录取得的应用专属用户标识符；本应用不请求你的 Apple 姓名或邮箱。</li>
             <li><strong>愿望清单数据</strong>：你创建的愿望项目、行动计划、目标年龄等内容。</li>
             <li><strong>进度和完成记录</strong>：标记任务完成状态、完成时间、备注等。</li>
             <li><strong>提醒设置</strong>：你设置的提醒频率、时间和方式。</li>
           </ul>
 
-          <h3>2.2 自动收集的信息</h3>
+          <h3>2.2 本地处理与系统能力</h3>
           <ul>
-            <li><strong>设备信息</strong>：设备型号、操作系统版本、应用版本。</li>
-            <li><strong>使用统计</strong>：应用功能使用频率，仅用于改进产品体验。</li>
-            <li><strong>错误日志</strong>：应用崩溃或错误信息，用于帮助我们修复问题。</li>
+            <li><strong>本地偏好与缓存</strong>：引导状态、昵称、人生派别测试结果、天赋点、AI 对话历史和 AI 使用额度等保存在设备端。</li>
+            <li><strong>通知</strong>：在你授权后，应用会在设备上安排包含行动项标题的本地提醒。</li>
             <li><strong>iCloud 数据</strong>：通过 CloudKit 同步的用户数据。</li>
           </ul>
 
@@ -338,7 +337,7 @@
             <li>不收集你的位置数据。</li>
             <li>不收集你的联系人列表。</li>
             <li>不收集你的照片库。</li>
-            <li>不收集你的个人身份识别信息，除非通过 Apple 登录产生的必要账户信息。</li>
+            <li>不请求 Apple 账户的姓名或邮箱；仅使用 Apple 返回的应用专属用户标识符。</li>
             <li>不收集用于广告追踪的 IDFA。</li>
           </ul>
         </section>
@@ -355,21 +354,14 @@
             <li>保存你的进度和完成记录。</li>
           </ul>
 
-          <h3>3.2 产品改进</h3>
+          <h3>3.2 AI 功能支持</h3>
           <ul>
-            <li>分析用户行为模式，了解哪些功能最受欢迎。</li>
-            <li>统计功能使用频率，优化用户界面。</li>
-            <li>收集错误信息，及时修复应用问题。</li>
-          </ul>
-
-          <h3>3.3 AI 功能支持</h3>
-          <ul>
-            <li><strong>灵感推荐</strong>：根据你的愿望类别推荐灵感图片，可能使用第三方图片服务，例如 Unsplash 或 Pexels。</li>
-            <li><strong>AI 助手</strong>：如用户启用 AI 生成功能，使用 Azure OpenAI API 生成行动建议。相关处理遵循微软隐私政策，详见 <a href="https://privacy.microsoft.com/" target="_blank" rel="noreferrer">Azure 隐私声明</a>。</li>
+            <li><strong>灵感图片</strong>：根据愿望分类加载 Unsplash 提供的公开图片。</li>
+            <li><strong>AI 助手</strong>：仅在你主动发起灵感探索、行动拆解或 AI 对话时，相关输入文本会经由 MyNext 安全网关以 HTTPS 发送至火山引擎方舟模型服务，用于生成回复或建议。请勿输入不希望由该服务商处理的敏感信息。</li>
             <li><strong>自动续期</strong>：重复任务完成后自动创建下一期任务。</li>
           </ul>
 
-          <h3>3.4 法律和安全</h3>
+          <h3>3.3 法律和安全</h3>
           <ul>
             <li>遵守法律要求和政府要求。</li>
             <li>保护我们的合法权利和用户安全。</li>
@@ -389,7 +381,7 @@
           <h3>4.2 数据加密</h3>
           <ul>
             <li>所有传输中的数据使用 HTTPS 加密。</li>
-            <li>iCloud 数据使用 Apple CloudKit 的端到端加密。</li>
+            <li>iCloud 数据的加密和存储方式以 Apple 的服务说明为准。</li>
             <li>本地数据使用 iOS 文件系统加密。</li>
           </ul>
 
@@ -412,17 +404,18 @@
             <li>数据完全由你的 iCloud 账户控制。</li>
           </ul>
 
-          <h3>5.2 Azure OpenAI API（Microsoft）</h3>
+          <h3>5.2 MyNext 安全网关与火山引擎方舟模型服务</h3>
           <ul>
             <li>仅当你主动启用 AI 生成功能时使用。</li>
             <li>用于生成愿望建议和行动计划。</li>
-            <li>隐私政策：<a href="https://privacy.microsoft.com/" target="_blank" rel="noreferrer">https://privacy.microsoft.com/</a></li>
-            <li>你可以随时禁用此功能。</li>
+            <li>相关输入文本经由 MyNext 安全网关传输至火山引擎方舟模型服务。</li>
+            <li>火山引擎隐私政策：<a href="https://www.volcengine.com/docs/6256/64902" target="_blank" rel="noreferrer">https://www.volcengine.com/docs/6256/64902</a></li>
+            <li>你可选择不使用 AI 功能。</li>
           </ul>
 
-          <h3>5.3 灵感图片 API</h3>
+          <h3>5.3 Unsplash 图片服务</h3>
           <ul>
-            <li>可配置为 Unsplash / Pexels 等图片服务。</li>
+            <li>应用加载 Unsplash 提供的公开分类图片。</li>
             <li>仅根据愿望类别查询公开图片，不传送个人数据。</li>
           </ul>
 
@@ -446,7 +439,7 @@
 
           <h3>6.2 我们可能共享给</h3>
           <ul>
-            <li>信任的第三方服务提供商，例如上文列举的 Apple、Microsoft 或图片服务。</li>
+            <li>信任的第三方服务提供商，例如上文列举的 Apple、火山引擎或图片服务。</li>
             <li>法律要求或执法部门依法要求的情形。</li>
             <li>为保护用户和公众安全而有必要的情形。</li>
           </ul>
@@ -462,7 +455,7 @@
           </div>
           <ul>
             <li>应用本地数据立即删除。</li>
-            <li>iCloud 中的数据在 30 天内清除。</li>
+            <li>应用会删除其 CloudKit 私有数据库中的相关数据；Apple 的备份或系统级保留处理以 Apple 规则为准。</li>
             <li>已删除的数据无法恢复。</li>
           </ul>
 
@@ -532,7 +525,7 @@
 
           <h3>13.1 通知系统</h3>
           <ul>
-            <li>提醒通知保存在你的设备上和 iCloud 中。</li>
+            <li>提醒通知由设备本地安排；提醒相关设置会随应用数据同步至 iCloud。</li>
             <li>通知内容，例如任务标题、时间，属于你的私密信息。</li>
             <li>Apple 无法看到你的个人通知内容。</li>
           </ul>
@@ -556,13 +549,13 @@
           <h2>14. 合规声明</h2>
           <ul class="checklist">
             <li><strong>ITSAppUsesNonExemptEncryption</strong>：否，仅使用标准 HTTPS。</li>
-            <li><strong>PrivacyInfo.xcprivacy</strong>：已声明 UserDefaults、用户输入数据与非追踪用途。</li>
+            <li><strong>PrivacyInfo.xcprivacy</strong>：已声明 UserDefaults、账户标识符、用户输入数据与非追踪用途。</li>
             <li><strong>App Store 营养标签</strong>：应准确反映本隐私政策所描述的数据处理方式。</li>
           </ul>
 
           <div class="callout">
             <p><strong>生效日期</strong>：本隐私政策自 2026 年 7 月 17 日起生效。</p>
-            <p><strong>最后更新</strong>：2026 年 7 月 17 日。</p>
+            <p><strong>最后更新</strong>：2026 年 9 月 2 日。</p>
           </div>
         </section>
 
